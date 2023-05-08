@@ -24,11 +24,10 @@ public class Exercise3ShoppingItemCatalog {
     @Test
     public void givenANotValidCode_whenGetItem_thenNullIsReturned(){
 
-        String code = "XYZ1234";
+        ShoppingItemCatalog shoppingItemCatalog = new ShoppingItemCatalog();
+        shoppingItemCatalog.getItem(new ShoppingItem("ABC1000", "Item 1", "243",12000));
 
-        ShoppingItem item = ShoppingItemCatalog.getItem(code);
-
+        ShoppingItem item = shoppingItemCatalog.getItem("ABC9999");
         Assertions.assertNull(item);
-    }
     }
 }
